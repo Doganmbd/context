@@ -16,6 +16,13 @@ const ProductApp = () => {
         setData(newData);
 
     }
+    const handleClickDecrease = (e)=> {
+        console.log(e.target.id)
+        const newData = [...data];
+        newData[e.target.id - 1].price--;
+        setData(newData);
+
+    }
 
   return (
     <div>
@@ -27,13 +34,14 @@ const ProductApp = () => {
                     <h1>{veri.price}</h1>
                     <h1>{veri.quantity}</h1>
                     <button id={veri.id} onClick = {handleClickIncrease} >increase</button>
+                    <button id={veri.id} onClick = {handleClickDecrease} >decrease</button>
                     
                 </div>
             )
             
         })}
         
-                    <button>decrease</button>
+                    
      
         
     </div>
