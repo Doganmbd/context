@@ -1,8 +1,11 @@
 import React from 'react'
+import Product from './Product'
 
-const Products = () => {
+const Products = ({handleClickIncrease,handleClickDecrease,veri}) => {
   return (
-    <div>Products</div>
+    <div>
+      <Product handleClickIncrease={handleClickIncrease} handleClickDecrease={handleClickDecrease} veri={veri}/>
+    </div>
   )
 }
 
