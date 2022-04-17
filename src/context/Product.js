@@ -14,7 +14,7 @@ const Product = ({veri}) => {
         <h4>{veri.product}</h4>
         <h4>{veri.price}</h4>
 
-        <button onClick= {()=> handleClickIncrease(veri.id)} >increase</button>
+        <button id={veri.id} onClick= {handleClickIncrease} >increase</button>
         
         <button onClick= {()=> handleClickDecrease(veri.id)} >decrease</button>
         

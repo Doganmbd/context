@@ -20,9 +20,9 @@ export const ProductProvider = (props) => {
     const [data,setData] = useState(Data);
 
     const handleClickIncrease = (e) => {
-        console.log(e);
+        console.log(e.target.id);
         const newData = [...data];
-        newData[e - 1].price++;
+        newData[e.target.id - 1].price++;
         setData(newData);
       };
       const handleClickDecrease = (e) => {
