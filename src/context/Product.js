@@ -1,17 +1,23 @@
-import React , {useContext} from 'react'
+import React, { useContext }  from 'react'
 import { Context } from './Context'
 
-const Product = () => {
 
-  //* burada hangi context i kullancaksma use context içerisine parametre olarak  onu göndermem lazım .
+const Product = ({veri}) => {
 
-  const {data} = useContext(Context)
-  
+  const {handleClickIncrease,handleClickDecrease}= useContext(Context)
 
-  console.log(data)
+
+
   return (
     <div>
-        product
+      <h1>Product</h1>
+        <h4>{veri.product}</h4>
+        <h4>{veri.price}</h4>
+
+        <button onClick= {()=> handleClickIncrease(veri.id)} >increase</button>
+        
+        <button onClick= {()=> handleClickDecrease(veri.id)} >decrease</button>
+        
     </div>
   )
 }
